@@ -1,4 +1,5 @@
-require("./database/connection")
+// when connection is imported, file is run giving us access to connection
+require('./database/connection')
 
 const express = require('express')
 const cors = require('cors')
