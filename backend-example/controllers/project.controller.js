@@ -1,6 +1,5 @@
 const { Project } = require('../models/project.model.js')
 
-// if run into issue get rid of sort
 const getProjects = (req, res) => {
   Project.find()
     .sort({ createdAt: -1 })
@@ -14,4 +13,14 @@ const getProjects = (req, res) => {
     })
 }
 
-module.exports = { getProjects }
+const addProject = (req,res) => {
+  Project.create(req.body).then(result=>{
+    res.status(201).send(result)
+  }).catch((err) => {
+    res.status(400).send(
+              `There was an error updating projects ${err}`
+    )
+  })
+}
+
+module.exports = { getProjects, addProject }
