@@ -7,8 +7,10 @@ const cors = require('cors')
 const projectRoutes = require('./routes/projectRoutes')
 
 const app = express()
+app.use(cors())
+app.use(express.json())
 
-const PORT = process.env.PORT
+
 const PASS = process.env.PASS
 const dbURI = process.env.URL
 
@@ -26,10 +28,10 @@ mongoose
   })
   .catch((err) => console.log(err))
 
-app.use(cors())
-app.use(express.json())
+
 
 app.get('/', (req, res) => res.send('Hello from homepage.'))
-app.listen(PORT, () => console.log(`Server Running on port: ${PORT}`))
 
 app.use('/projects', projectRoutes)
+
+module.exports = app
