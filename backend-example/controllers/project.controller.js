@@ -13,8 +13,8 @@ const getProjects = (req, res) => {
     })
 }
 
-const addProject = (req,res) => {
-  Project.create(req.body).then(result=>{
+const addProject = (req, res) => {
+  Project.create(req.body).then(result => {
     res.status(201).send(result)
   }).catch((err) => {
     res.status(400).send(

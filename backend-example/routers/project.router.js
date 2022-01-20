@@ -3,6 +3,6 @@ const { getProjects, addProject } = require('../controllers/project.controller')
 
 const router = express.Router()
 router.get('/', getProjects)
-router.post("/", addProject)
+router.post('/', addProject)
 
 module.exports = router
