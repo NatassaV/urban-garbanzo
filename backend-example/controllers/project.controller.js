@@ -1,7 +1,7 @@
 const { Project } = require('../models/project.model.js')
 
 // if run into issue get rid of sort
-const projectGetAll = (req, res) => {
+const getProjects = (req, res) => {
   Project.find()
     .sort({ createdAt: -1 })
     .then((result) => {
@@ -14,4 +14,4 @@ const projectGetAll = (req, res) => {
     })
 }
 
-module.exports = { projectGetAll }
+module.exports = { getProjects }

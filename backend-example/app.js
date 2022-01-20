@@ -13,5 +13,4 @@ app.use('/projects', projectRoutes)
 
 app.get('/', (req, res) => res.send('Hello from homepage.'))
 
-
 module.exports = app
