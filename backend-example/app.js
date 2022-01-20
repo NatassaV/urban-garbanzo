@@ -8,13 +8,10 @@ const cors = require('cors')
 const projectRoutes = require('./routes/projectRoutes')
 
 const app = express()
+
 const PORT = process.env.PORT
-console.log(PORT)
-
 const PASS = process.env.PASS
-
-// Connection String to MongoDB
-const dbURI = dbConfig.url
+const dbURI = process.env.URL
 
 const options = {
   sslKey: PASS,
