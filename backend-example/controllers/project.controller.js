@@ -1,4 +1,4 @@
-const { Project } = require('../models/project')
+const { Project } = require('../models/project.model.js')
 
 // if run into issue get rid of sort
 const projectGetAll = (req, res) => {

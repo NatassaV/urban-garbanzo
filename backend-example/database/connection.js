@@ -13,7 +13,7 @@ const options = {
 
 mongoose
   .connect(dbURI, options)
-  .then((result) =>  {
+  .then((result) => {
     console.log('Database is connected')
   })
   .catch((err) => console.log(err))
