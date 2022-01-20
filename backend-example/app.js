@@ -15,18 +15,18 @@ const credentials = dbConfig.credentials
 const dbURI = dbConfig.url
 
 const options = {
-    sslKey: credentials,
-    sslCert: credentials,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+  sslKey: credentials,
+  sslCert: credentials,
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 }
 
 mongoose
-    .connect(dbURI, options)
-    .then(function (result) {
-        console.log('Database is connected')
-    })
-    .catch((err) => console.log(err))
+  .connect(dbURI, options)
+  .then(function (result) {
+    console.log('Database is connected')
+  })
+  .catch((err) => console.log(err))
 
 app.use(cors())
 app.use(express.json())
