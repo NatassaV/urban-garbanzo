@@ -9,16 +9,16 @@ const projectRoutes = require('./routes/projectRoutes')
 
 const app = express()
 const PORT = process.env.PORT
-console.log(PORT);
+console.log(PORT)
 
-const credentials = dbConfig.credentials
+const PASS = process.env.PASS
 
 // Connection String to MongoDB
 const dbURI = dbConfig.url
 
 const options = {
-  sslKey: credentials,
-  sslCert: credentials,
+  sslKey: PASS,
+  sslCert: PASS,
   useNewUrlParser: true,
   useUnifiedTopology: true
 }
