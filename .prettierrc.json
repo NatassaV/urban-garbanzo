@@ -1,8 +1,7 @@
 {
     "trailingComma": "es5",
     "tabWidth": 4,
-    "semi": false,
+    "semi": true,
     "singleQuote": true,
-    "editor.formatOnSave": true,
-    "semicolons":true
+    "printWidth": 80
 }
